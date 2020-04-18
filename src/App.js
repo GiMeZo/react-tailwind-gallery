@@ -17,12 +17,12 @@ const App = () => {
   });
 
   return (
-    <div className="container">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="font-body container">
+      {isLoading ? <h1 className="text-6xl text-center">Loading...</h1> : <div className="grid grid-cols-3 gap-4">
         {images.map(image => (
-          <ImageCard key={image.id} image="" />
+          <ImageCard key={image.id} image={image} />
         ))}
-      </div>
+      </div>}
     </div>
   )
 }
